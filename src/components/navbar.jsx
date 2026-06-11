@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Navbar(){
     return(
@@ -5,9 +6,10 @@ function Navbar(){
         <nav className="flex flex-col gap-4"> 
         sidebar
         text 
+        <Link to = "./Home.jsx"> 
         <button className="align-top">
             button1
-        </button >
+        </button ></Link>
         <button className="inline-block align-bottom ">
             button2
         </button>

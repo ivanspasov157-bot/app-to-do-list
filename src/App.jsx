@@ -13,7 +13,11 @@ function App() {
     <div className='flex'>
    
     <Navbar /> 
-    <Dashboard/>
+    <Routes>
+     <Dashboard/>
+    <HomePage/>
+    <ProfilePage/>
+    </Routes>
     </div>
   )
 }
