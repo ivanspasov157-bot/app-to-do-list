@@ -1,19 +1,19 @@
 
 function Navbar(){
     return(
-        <aside className="border-2 borderborder-color: var(--color-black), w-64 h-screen color bg-violet-600 ">
-        <nav>
+        <aside className="border-2 w-64 h-screen bg-violet-600 ">
+        <nav className="flex flex-col gap-4"> 
         sidebar
         text 
-        <button1 className="align-top">
+        <button className="align-top">
             button1
-        </button1 >
-        <button2 className="inline-block align-bottom ">
+        </button >
+        <button className="inline-block align-bottom ">
             button2
-        </button2>
-        <button2>
+        </button>
+        <button>
             button3
-        </button2>
+        </button>
 
         </nav>
         </aside>
