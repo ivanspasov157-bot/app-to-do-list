@@ -13,12 +13,14 @@ function App() {
     <div className='flex'>
    
     <Navbar /> 
+    
     <Routes>
-     <Dashboard/>
-    <HomePage/>
-    <ProfilePage/>
+    <Route path='/' element = {<Dashboard/>}/>
+    <Route path='/home' element = {<HomePage/>}/>
+    <Route path='/profile' element = {<ProfilePage/>}/>
+    
     </Routes>
-    </div>
+     </div>
   )
 }
 

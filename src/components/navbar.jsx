@@ -6,16 +6,19 @@ function Navbar(){
         <nav className="flex flex-col gap-4"> 
         sidebar
         text 
-        <Link to = "./Home.jsx"> 
+        <Link to = "./"> 
         <button className="align-top">
-            button1
+           dashboard
         </button ></Link>
+        <Link to = "./home">
         <button className="inline-block align-bottom ">
-            button2
-        </button>
+           home
+        </button></Link>
+        
+        <Link to = "./profile">
         <button>
-            button3
-        </button>
+            profile
+        </button></Link>
 
         </nav>
         </aside>
