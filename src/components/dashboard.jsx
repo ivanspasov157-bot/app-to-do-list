@@ -8,7 +8,7 @@ function Dashboard() {
             
             console.log("useEffect is running");
             const {data,error} = await supabase
-            .from("tasks")
+            .from("Tasks")
             .select("*");
 
             console.log(data);

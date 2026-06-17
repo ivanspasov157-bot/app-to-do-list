@@ -1,5 +1,7 @@
+
+
 // addtask
-export function add_task(id,title,priority,category,main_text,date,status){
+export function add_task(tasks,id,title,priority,category,main_text,date,status){
      const task = {
         id,
         title,
@@ -8,8 +10,10 @@ export function add_task(id,title,priority,category,main_text,date,status){
         main_text,
         date,
         status};
-      tasks.push(task)
+      tasks.push(...tasks,task)
 }
+
+const d = new Date()
 // remove task
 export function remove_task_uses_filter(tasks,id){
    tasks=tasks.filter(task => task.id !== id)
@@ -23,3 +27,14 @@ return tasks.map( task=>{if(task.id == id ){
  }
   return task
 })}
+
+function check_date(task){
+   if(d==task.date){
+
+   } else if (d>task.date){
+
+   } else if (d<task.date){
+      
+   }
+
+}
