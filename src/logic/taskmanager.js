@@ -10,10 +10,10 @@ export function add_task(tasks,id,title,priority,category,main_text,date,status)
         main_text,
         date,
         status};
-      tasks.push(...tasks,task)
+      tasks.push(task)
 }
+const taskDate = new Date(task.date)
 
-const d = new Date()
 // remove task
 export function remove_task_uses_filter(tasks,id){
    tasks=tasks.filter(task => task.id !== id)
@@ -29,12 +29,46 @@ return tasks.map( task=>{if(task.id == id ){
 })}
 
 function check_date(task){
-   if(d==task.date){
+   const today = new Date()
+   const taskDate = new Date(task.date)
+   const differenceInSecond= taskDate - today;
+   const differenceIndays = differenceInSecond/(1000 * 60 * 60 *24);
+   if(differenceInDays<0){
+      return "this task is overdue";
 
-   } else if (d>task.date){
+   } else if (differenceIndays<=3){
 
-   } else if (d<task.date){
-      
-   }
+      return `due soon,${differenceIndays} days remain`
+   } else return `${differenceIndays} days`;
 
 }
+
+// function priority score 
+const overal_score_ptiority = 0
+
+function check_priority(task){
+   if (task.priority == high){
+      overal_score_ptiority+30
+   }
+   if (task.priority == medium){
+      overal_score_ptiority+20
+   }
+   if (task.priority == low){
+      overal_score_ptiority+10
+   }
+}
+
+function check_date_priority(task){
+   const today = new Date()
+   const taskDate = new Date(task.date)
+   const differenceInSecond= taskDate - today;
+   const differenceIndays = differenceInSecond/(1000 * 60 * 60 *24);
+   if(differenceInDays<0){
+      overal_score_ptiority + 50
+
+   } 
+   if (differenceIndays<=3){
+   overal_score_ptiority=30
+   } else overal_score_ptiority + 0; }
+
+
