@@ -36,7 +36,7 @@ function check_date(task){
    if(differenceInDays<0){
       return "this task is overdue";
 
-   } else if (differenceIndays<=3){
+   } else if (differenceIndDays<=3){
 
       return `due soon,${differenceIndays} days remain`
    } else return `${differenceIndays} days`;
@@ -44,31 +44,32 @@ function check_date(task){
 }
 
 // function priority score 
+
+function oveal_priority_of_task(){
 const overal_score_ptiority = 0
 
-function check_priority(task){
-   if (task.priority == high){
-      overal_score_ptiority+30
-   }
-   if (task.priority == medium){
-      overal_score_ptiority+20
-   }
-   if (task.priority == low){
-      overal_score_ptiority+10
-   }
-}
 
-function check_date_priority(task){
+   if (task.priority == "high"){
+      overal_score_ptiority=+30
+   }
+   if (task.priority =="medium"){
+      overal_score_ptiority=+20
+   }
+   if (task.priority == "low"){
+      overal_score_ptiority=+10
+   }
    const today = new Date()
    const taskDate = new Date(task.date)
    const differenceInSecond= taskDate - today;
    const differenceIndays = differenceInSecond/(1000 * 60 * 60 *24);
    if(differenceInDays<0){
-      overal_score_ptiority + 50
+      overal_score_ptiority= + 50
 
    } 
    if (differenceIndays<=3){
-   overal_score_ptiority=30
-   } else overal_score_ptiority + 0; }
+   overal_score_ptiority=+30
+   } else overal_score_ptiority =+ 0; 
+return overal_score_ptiority
+}
 
 
