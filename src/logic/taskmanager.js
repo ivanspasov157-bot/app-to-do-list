@@ -47,7 +47,7 @@ function check_date(task){
 
 
 
-function oveal_priority_of_task(tasks,task){
+function oveal_priority_of_task(task){
 let overal_score_ptiority = 0
 const today = new Date()
    const taskDate = new Date(task.date)
@@ -74,9 +74,10 @@ const today = new Date()
 return overal_score_ptiority
 }
 
-function revomend_next_task(tasks){
-fileter_tasks_based_on_status=tasks.filter(task => task.status !== true)
-return fileter_tasks_based_on_status.toSorted((a,b) => oveal_priority_of_task(a) - oveal_priority_of_task(b))
+function recommend_next_task(tasks){
+let fileter_tasks_based_on_status=tasks.filter(task => task.status !== true)
+fileter_tasks_based_on_status.toSorted((a,b) => oveal_priority_of_task(b) - oveal_priority_of_task(a))
+return fileter_tasks_based_on_status[0]
 
 }
 
