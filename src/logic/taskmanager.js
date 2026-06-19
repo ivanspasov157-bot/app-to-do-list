@@ -46,9 +46,8 @@ function check_date(task){
 
 
 
-function oveal_priority_of_task(tasks,task){
-tasks_filtered_on_status=tasks.filter(task => task.status !== true)
 
+function oveal_priority_of_task(tasks,task){
 let overal_score_ptiority = 0
 const today = new Date()
    const taskDate = new Date(task.date)
@@ -72,7 +71,14 @@ const today = new Date()
    else if (differenceInDays<=3){
    overal_score_ptiority+=30
    } else overal_score_ptiority += 0; 
-return tasks_filtered_on_status.toSorted((a,b) => a[overal_score_ptiority] - b[overal_score_ptiority])
+return overal_score_ptiority
 }
+
+function revomend_next_task(tasks){
+fileter_tasks_based_on_status=tasks.filter(task => task.status !== true)
+return fileter_tasks_based_on_status.toSorted((a,b) => oveal_priority_of_task(a) - oveal_priority_of_task(b))
+
+}
+
 
 
