@@ -35,7 +35,7 @@ function check_date(task){
    if(differenceInDays<0){
       return "this task is overdue";
 
-   } else if (differenceIndDays<=3){
+   } else if (differenceInDays<=3){
 
       return `due soon,${differenceInDays} days remain`
    } else return `${differenceInDays} days`;
@@ -76,8 +76,8 @@ return overal_score_ptiority
 
 function recommend_next_task(tasks){
 let fileter_tasks_based_on_status=tasks.filter(task => task.status !== true)
-fileter_tasks_based_on_status.toSorted((a,b) => oveal_priority_of_task(b) - oveal_priority_of_task(a))
-return fileter_tasks_based_on_status[0]
+let sorted_array=fileter_tasks_based_on_status.toSorted((a,b) => oveal_priority_of_task(b) - oveal_priority_of_task(a))
+return sorted_array[0]
 
 }
 
