@@ -16,11 +16,13 @@ function App() {
 const [tasks, setTasks] = useState([])
 const [session, setSession] = useState(null)
 const [profile, setProfile] = useState(null)
+const [authLoading, setAuthLoading] = useState(true)
 
 // Authentication
 useEffect(() => {
   supabase.auth.getSession().then(({ data }) => {
     setSession(data.session);
+    setAuthLoading(false);
   });
 
   const { data: authListener } =
@@ -96,7 +98,17 @@ async function handleLogout() {
   setTasks([]);
   setProfile(null)
 }
-   
+  
+
+if (authLoading) {
+  return (
+    <main className="flex min-h-screen items-center justify-center bg-black">
+      <p className="text-zinc-400">
+        Loading...
+      </p>
+    </main>
+  );
+}
 if (!session) {
   return <Auth />;
 }
