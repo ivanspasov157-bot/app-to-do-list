@@ -1,5 +1,5 @@
 //filter function 
-export function filter_thorugh_category(tasks,categoryName,value_we_look_for){
+export function filter_through_category(tasks,categoryName,value_we_look_for){
 
  return   tasks.filter(task=>task[categoryName]==value_we_look_for)}
 
