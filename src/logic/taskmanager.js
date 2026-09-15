@@ -1,62 +1,5 @@
 
 
-// addtask
-export function add_task(
-  tasks,
-  id,
-  title,
-  priority,
-  category,
-  main_text,
-  date,
-  status
-) {
-  const task = {
-    id,
-    title,
-    priority,
-    category,
-    main_text,
-    date,
-    status
-  };
-
-  return [...tasks, task];
-}
-
-/*export function add_task(tasks,id,title,priority,category,main_text,date,status){
-     const task = {
-        id,
-        title,
-        priority,
-        category,
-        main_text,
-        date,
-        status};
-      tasks.push(task)
-}*/ 
-
-
-
-// remove task
-export function remove_task_uses_filter(tasks,id){
-   tasks=tasks.filter(task => task.id !== id)
-   return tasks
-}
-
-// edit 
-export function edit_tasks(tasks, id, category, updated_value) {
-  return tasks.map(task => {
-    if (task.id === id) {
-      return {
-        ...task,
-        [category]: updated_value
-      };
-    }
-
-    return task;
-  });
-}
 
 // checking whats overdue based on date
 export function check_date(task) {
@@ -133,14 +76,5 @@ return overal_score_ptiority
 }
 
 
-
-// Replace the task with the matching ID, keep every other task unchanged. 
-export function replace_task(tasks, updatedTask) {
-  return tasks.map(task =>
-    task.id === updatedTask.id
-      ? updatedTask
-      : task
-  );
-}
 
 
