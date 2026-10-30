@@ -1,25 +1,11 @@
-function TaskContentHeader({tasks}) {
+function TaskContentHeader() {
   
   return (
-    <div
-      className="
-        flex
-        items-center
-        justify-between
-        border-b border-zinc-800
-        px-6 py-4
-      "
-    >
-
-      <div>
-        <h2 className="text-xl font-semibold text-white">
-           Tasks
-        </h2>
-
-        
-      </div>
-
-    </div>
+  <div className="border-b border-zinc-800 px-6 py-4">
+    <h2 className="text-xl font-semibold text-white">
+    Tasks
+    </h2>
+  </div>
   );
 }
 

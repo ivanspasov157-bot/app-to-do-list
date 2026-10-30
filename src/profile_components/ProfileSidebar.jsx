@@ -1,7 +1,6 @@
 import { Pencil } from "lucide-react";
 
 
-// since when you are a memmber
 function ProfileSidebar({session, profile, onEdit, }) {
   const memberSince = session?.user?.created_at
   ? new Date(session.user.created_at).toLocaleDateString("en-US", {
@@ -10,9 +9,9 @@ function ProfileSidebar({session, profile, onEdit, }) {
       year: "numeric",
     })
   : "";
-// check is user is anonymous 
+
   const isGuest = session?.user?.is_anonymous;
-// last time you sighned in
+
   const lastSignIn = session?.user?.last_sign_in_at
   ? new Date(session.user.last_sign_in_at).toLocaleString("en-US", {
       month: "long",

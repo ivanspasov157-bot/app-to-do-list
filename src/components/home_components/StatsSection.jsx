@@ -6,9 +6,6 @@ import {
 } from "lucide-react";
 
 function StatsSection({ tasks }) {
- 
- 
- 
   const totalTasks = tasks.length;
   
   const completedTasks = tasks.filter(
@@ -80,7 +77,7 @@ function StatsSection({ tasks }) {
       <CalendarDays size={16} className="text-blue-400" />
 
       <p className="text-sm text-zinc-400">
-        Future Tasks
+        Unstarted Tasks
       </p>
     </div>
 

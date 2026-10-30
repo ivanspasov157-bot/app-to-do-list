@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function EditTaskForm({ task, onSave, onCancel }) {
 
+  // two things i am add later to improve the app, but am still undecided for it
   const [title, setTitle] = useState(task.title);
   const [priority, setPriority] = useState(task.priority);
   const [category, setCategory] = useState(task.category);

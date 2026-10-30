@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 
-// this is the navigation bar include in app.jsj, below are the twillwing classes change it purely to links
+// Shared desktop and mobile navigation
 function Navbar({ onLogout }){
     return(
       <>
@@ -95,7 +95,7 @@ function Navbar({ onLogout }){
     </aside>
 
       {/* Mobile bottom navigation */}
-  {/* Mobile bottom navigation */}
+ 
 <nav
   className="
     fixed bottom-0 left-0 right-0 z-50

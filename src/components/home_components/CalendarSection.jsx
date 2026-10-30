@@ -14,8 +14,8 @@ function CalendarSection({ tasks }) {
 
   return (
     <section className="rounded-xl border border-zinc-800 bg-zinc-900 p-5">
-      <div className="mb-4 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+      
+        <div className="mb-4 flex items-center gap-2">
         <h2 className="text-lg font-semibold text-white">
           Calendar
         </h2>
@@ -23,16 +23,8 @@ function CalendarSection({ tasks }) {
         size={20}
         className="text-violet-400" />
         </div >
-        <div className="flex gap-2">
-          <button className="rounded-lg bg-zinc-800 px-4 py-2 text-sm text-white">
-            Week
-          </button>
-
-          <button className="px-4 py-2 text-sm text-zinc-400">
-            Month
-          </button>
-        </div>
-      </div>
+        
+     
 
       <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 md:grid-cols-7">
         {weekDays.map((day) => {

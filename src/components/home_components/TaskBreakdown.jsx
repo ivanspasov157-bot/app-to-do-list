@@ -1,6 +1,4 @@
-// i updated the name from stastschart to taskbreakdown, but i am not sure it changed everywhere i clicked on yes, when it
-// was asked to replace it, but i am leaving this comment here so i dont forget in case i run into naming problem later with 
-// this specific file 
+
 import {
 
   Flame,
@@ -44,7 +42,7 @@ function TaskBreakdown({ tasks }) {
       </div>
       <div className="rounded-lg border border-zinc-800 p-4">
        <div className="flex items-center gap-2">
-        <p className="text-sm text-zinc-400">Moderate Priority</p>
+        <p className="text-sm text-zinc-400">Medium Priority</p>
          <SquareMenu
            size={20}
             className="text-violet-400"

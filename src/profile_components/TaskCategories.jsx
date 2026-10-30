@@ -35,7 +35,7 @@ function TaskCategories({tasks}) {
     >
 
       <h2 className="text-lg font-semibold text-white">
-        Task Categories
+        Task Status
       </h2>
 
       <div className="mt-6 flex items-center gap-8">

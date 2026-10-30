@@ -144,12 +144,12 @@ async function handleDelete(id) {
 }
 
 
-// how tasks page is structured
-    return(
+
+  return(
 
  <main className="min-h-screen pb-24 md:pb-0">
 
-      <TaskContentHeader tasks={tasks} />
+      <TaskContentHeader />
 
       <section className="flex flex-col border-b border-zinc-800 md:flex-row">
 

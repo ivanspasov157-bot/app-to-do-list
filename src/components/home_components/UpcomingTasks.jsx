@@ -1,4 +1,4 @@
-import{ClipboardList} from "lucide-react"
+import {ClipboardList} from "lucide-react"
 
 
 function UpcomingTasks({ tasks }) {

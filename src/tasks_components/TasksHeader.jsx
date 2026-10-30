@@ -1,15 +1,18 @@
 
-
 import {
   Search,
   ArrowUpDown,
   Plus
 } from "lucide-react";
 
-function TasksHeader({ onAddClick, searchTerm,
-  onSearchChange, sortType,
+function TasksHeader({ 
+  onAddClick, 
+  searchTerm,
+  onSearchChange, 
+  sortType,
   onSortChange, }) {
-  return (
+  
+    return (
     <header
       className="
         flex
@@ -62,16 +65,16 @@ function TasksHeader({ onAddClick, searchTerm,
       <div className="flex w-full gap-3 sm:w-auto">
         <div className="relative flex-1 sm:flex-none">
           <ArrowUpDown
-    size={16}
-    className="
-      pointer-events-none
-      absolute
-      left-3
-      top-1/2
-      -translate-y-1/2
-      text-zinc-300
-    "
-  />
+           size={16}
+          className="
+          pointer-events-none
+          absolute
+          left-3
+          top-1/2
+          -translate-y-1/2
+          text-zinc-300
+          "
+         />
 
   <select
     value={sortType}

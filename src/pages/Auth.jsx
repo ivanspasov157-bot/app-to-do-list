@@ -11,7 +11,7 @@ function Auth() {
   async function handleSignup() {
      setErrorMessage("");
 
-  const { data, error } = await supabase.auth.signUp({
+  const { error } = await supabase.auth.signUp({
     email,
     password,
   });
@@ -22,14 +22,13 @@ function Auth() {
     return;
   }
 
-  console.log("Signup successful:", data);
   navigate("/");
   }
   // handles the login of guests specifically
   async function handleGuestLogin() {
   setErrorMessage("");
 
-  const { data, error } =
+  const { error } =
     await supabase.auth.signInAnonymously();
 
   if (error) {
@@ -38,13 +37,12 @@ function Auth() {
     return;
   }
 
-  console.log("Guest login successful:", data);
   navigate("/");
 }
   async function handleLogin() {
     setErrorMessage("");
 
-  const { data, error } =
+  const { error } =
     await supabase.auth.signInWithPassword({
       email,
       password,
@@ -56,7 +54,7 @@ function Auth() {
     return;
   }
 
-  console.log("Login successful:", data);
+  
   navigate("/");
   }
 

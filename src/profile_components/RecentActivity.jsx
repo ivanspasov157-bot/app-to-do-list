@@ -7,7 +7,7 @@ import {
 function RecentActivity({tasks}) {
 
 const recentTasks = tasks
-  .toSorted((a, b) => b.id - a.id)
+  .toSorted((a, b) => new Date(b.created_at) - new Date(a.created_at))
   .slice(0, 4);
 
 
@@ -46,22 +46,12 @@ const recentTasks = tasks
     >
 
       {/* Header */}
-      <div className="flex items-center justify-between">
-
         <h2 className="text-lg font-semibold text-white">
           Recent Activity
         </h2>
 
-        <button
-          className="
-            text-sm text-zinc-400
-            hover:text-white
-          "
-        >
-          View All
-        </button>
 
-      </div>
+      
 
       {/* Activity list */}
 <div className="mt-6 flex flex-col gap-5">

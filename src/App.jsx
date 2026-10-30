@@ -1,5 +1,5 @@
 
-import './App.css'
+
 import Navbar from"./components/navbar"
 import TasksPage from './pages/Tasks'
 import HomePage from './pages/Home'

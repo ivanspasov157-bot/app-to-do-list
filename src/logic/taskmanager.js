@@ -1,9 +1,10 @@
 
 
 
-// checking whats overdue based on date
+//  Create a readable message based on the task's due date
 export function check_date(task) {
   const today = new Date();
+  today.setHours(0, 0, 0, 0);
   const taskDate = new Date(task.date);
 
   const differenceInMilliseconds = taskDate - today;
@@ -29,7 +30,7 @@ export function check_date(task) {
   return `${differenceInDays} days remaining`;
 }
 
-// function priority score 
+// Calculate a recommendation score for one task
 
 export function overal_priority_of_task(task){
 let overal_score_ptiority = 0
@@ -52,11 +53,11 @@ const today = new Date()
    } 
    else if (differenceInDays<=3){
    overal_score_ptiority+=30
-   } else overal_score_ptiority += 0; 
+   } ; 
 return overal_score_ptiority
 }
 
-// reccomend next task 
+// Recommend the highest-scoring unfinished task
  export function recommend_next_task(tasks) {
   const unfinishedTasks = tasks.filter(
     (task) => task.status !== "Completed"

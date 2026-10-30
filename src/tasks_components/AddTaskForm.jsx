@@ -2,6 +2,8 @@ import { useState } from "react";
 
 function AddTaskForm({ onAdd }) {
 
+  // Default values required when a task is first created.
+ // These fields can be changed later through EditTaskForm.
   const [title, setTitle] = useState("");
   const [priority, setPriority] = useState("Medium");
   const [category, setCategory] = useState("Study");

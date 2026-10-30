@@ -4,10 +4,12 @@ function RecommendedTask({ task }) {
   if (!task) {
     return (
       <section className="rounded-xl border border-zinc-800 bg-zinc-900 p-5">
+         <div className="flex items-center gap-2">
         <h2 className="text-lg font-semibold text-white">
           Recommended Task 
-        </h2>
-        <ClipboardCopy />
+        </h2> <ClipboardCopy size={17} className=" 
+         text-green-400" />
+       </div>
         <p className="mt-4 text-zinc-400">
           All tasks completed!
         </p>

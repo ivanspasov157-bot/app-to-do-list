@@ -18,8 +18,6 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 const overdueTasks = tasks.filter((task) => {
   const taskDate = new Date(task.date);
-  
-
   return taskDate < today && task.status !== "Completed";
 }).length;
 

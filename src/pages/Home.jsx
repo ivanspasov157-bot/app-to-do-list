@@ -10,7 +10,6 @@ import { recommend_next_task } from "../logic/taskmanager";
 
 
 function HomePage({tasks}){
-   // how home page is structured
   const recommendedTask = recommend_next_task(tasks);
 
    return( <main className="flex-1 p-4 md:p-6">

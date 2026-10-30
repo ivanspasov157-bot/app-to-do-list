@@ -45,7 +45,7 @@ async function handleProfileSave() {
 
 
 
-   // how profile page is structured
+ 
     return (
     <main className="grid grid-cols-1 gap-4 p-4 md:grid-cols-[300px_1fr] md:gap-6 md:p-6">
 
@@ -67,7 +67,7 @@ async function handleProfileSave() {
  {/* Edit Profile popup */}
     {isEditing && (
       <div className="fixed z-50 inset-0 flex items-center justify-center bg-black/60">
-        <div className="mx-4 w-full h-full max-w-96 rounded-xl border border-zinc-800 bg-zinc-900 p-6">
+        <div className="mx-4 w-full  max-w-96 rounded-xl border border-zinc-800 bg-zinc-900 p-6">
 
           <h2 className="mb-4 text-xl font-semibold text-white">
             Edit Profile
@@ -87,7 +87,7 @@ async function handleProfileSave() {
             placeholder="Profession"
           />
 
-          <div className="flex gap-3 h-full">
+          <div className="flex gap-3 ">
             <button
               onClick={handleProfileSave}
               className="flex-1 rounded-lg bg-violet-600 px-4 py-2 text-white"
