@@ -7,16 +7,16 @@ The application allows users to create and manage tasks, track deadlines and sta
 ## Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Dashboard.png)
 
 ### Tasks
-![Tasks](screenshots/tasks.png)
+![Tasks](screenshots/Tasks.png)
 
 ### Profile
-![Profile](screenshots/profile.png)
+![Profile](screenshots/Profile.png)
 
 ### Login
-![Login](screenshots/log.png)
+![Login](screenshots/Log.png)
 
 ## Live Demo
 
