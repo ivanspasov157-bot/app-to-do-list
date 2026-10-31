@@ -4,6 +4,20 @@ A responsive task-management web application built with React and Supabase.
 
 The application allows users to create and manage tasks, track deadlines and statistics, receive priority-based task recommendations, maintain a profile, and securely access their own data across sessions.
 
+## Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Tasks
+![Tasks](screenshots/tasks.png)
+
+### Profile
+![Profile](screenshots/profile.png)
+
+### Login
+![Login](screenshots/log.png)
+
 ## Live Demo
 
 https://ivan-task-manager.netlify.app
